@@ -1,0 +1,85 @@
+<div class="container">
+    <div class="row">
+        <!-- Products name, category, price are displayed-->
+        {{#each products}}
+                <div class="col-sm-6 col-md-4">
+                    <a href="/product/{{this._id}}">
+                        <div class="thumbnail">
+                            <img src="{{ this.image }}" class="img-responsive">
+                        </div>
+                        <div class="caption">
+                            <h3>{{this.name}}</h3>
+                            <p>{{this.category.name}}</p>
+                            <p> € {{this.price}} </p>
+                            <a href="/shop/{{this._id}}" class="btn btn-primary pull-right" role="button">Buy</a>
+                        </div>
+
+                    </a>
+                </div>
+            {{/each}}
+    </div>
+</div>
+
+<!--chat code-->
+<div class="container">
+    <div class="row chat-window col-xs-5 col-md-3" id="chat_window_1" style="margin-left:10px;">
+        <div class="col-xs-12 col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading top-bar">
+                    <div class="col-md-8 col-xs-8">
+                        <h3 class="panel-title"><span class="glyphicon glyphicon-comment"></span>Live Chat</h3>
+                    </div>
+                    <div class="col-md-4 col-xs-4" style="text-align: right;">
+                        <a href="#"><span id="minim_chat_window" class="glyphicon glyphicon-minus icon_minim"></span></a>
+                        <a href="#"><span class="glyphicon glyphicon-remove icon_close" data-id="chat_window_1"></span></a>
+                    </div>
+                </div>
+
+                <div id="eshop-chat">
+                    <div id="chat-window">
+                        <div class="panel-body msg_container_base">
+                            <div class="row msg_container base_sent">
+                                <!-- <div class="col-md-10 col-xs-10">
+                                    <div class="messages msg_sent">
+                                        <p>that mongodb thing looks good, huh?
+                                        tiny master db, and huge document store</p>
+                                        <time datetime="2009-11-13T20:00">Timothy • 51 min</time> -->
+
+
+
+                            </div>
+                            <div id="output"></div>
+                            <div id="feedback"></div>
+                        </div>
+                        <form id="chat-form">
+                            <input id="handle" type="text" placeholder="Handle" />
+                            <input id="message" type="text" placeholder="Message" />
+                            <button id="send">Send</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- <div class="col-md-2 col-xs-2 avatar">
+                    <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
+                </div> -->
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+
+</script>
+
+<script onclick="send" src="/javascripts/socket.io.js"></script>
+<script src="/javascripts/chat.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.dev.js"></script>
+
