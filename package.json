@@ -20,7 +20,7 @@
     "express-session": "^1.15.6",
     "express-validator": "^2.20.5",
     "faker": "^4.1.0",
-    "hbs": "~4.0.1",
+    "hbs": "~4.2.0",
     "http-errors": "~1.6.2",
     "mongoosastic": "^4.4.1",
     "mongoose": "^5.3.9",
